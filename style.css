@@ -1,0 +1,56 @@
+html {
+    overflow: hidden;/*tout ce qui sor du body je ne veux pas voir*/
+    min-height: 100vh;/* taille minimume du boddy*/
+    cursor: crosshair;
+    height: 100%;
+    width: 100%;
+}
+
+.point {
+    background: black;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}
+
+#A{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#B {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    transform: translate(50%,50%);
+}
+#C {
+    position: absolute;
+}
+
+#oposer {
+    background-color: green;
+    width: 1px;
+    height: 10px;
+    transform: rotate(0deg) translate(-50%,-50%); /*ce qui permet de faire l'inclinaison */
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    bottom: 50%;
+    right: 50%;
+    z-index: -1;
+}
+
+#hypothen {
+    background-color: blue;
+    width: 0px;
+    height:1px;
+    transform: rotate(0deg) translate(-50%,-50%); /*ce qui permet de faire l'inclinaison */
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    bottom: 50%;
+    right: 50%;
+    z-index: -1;
+  }
