@@ -62,7 +62,7 @@ html.addEventListener('mousemove',(e)=>{
     hypothenus.style.left = (html.clientWidth/2)- AB/2+'px';
     hypothenus.style.width = AB+"px";
 
-    let angleCAB = Math.sin(AB/BC);
+    let angleCAB = Math.sin(AB/BC);//i try many function of trigonometrie
     hypothenus.style.transform = "rotate("+angleCAB+"turn) translate(-50%,-50%)";
 /////////////////////////////////EN: Display in console  //FR: Affichage dans la console
     console.log("---------------------------------");
