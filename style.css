@@ -29,7 +29,7 @@ html {
     position: absolute;
 }
 
-#AC {
+#adjacent {
     background-color: blueviolet;
     width: 100px;
     height: 1px;
@@ -55,7 +55,7 @@ html {
     z-index: -1;
 }
 
-#hypothen {
+#hypothenus {
     background-color: blue;
     width: 0px;
     height:1px;

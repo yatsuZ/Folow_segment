@@ -1,23 +1,30 @@
+/////////////////////////// document recovery
 const B = document.getElementById("B");
 const A = document.getElementById("A");
+const C = document.getElementById("C")
 const html = document.querySelector("html");
 const oposer = document.getElementById("oposer");
-const hypothen = document.getElementById("hypothen");
-const divAC = document.getElementById("AC");
+const hypothenus = document.getElementById("hypothenus");
+const adjacent = document.getElementById("adjacent");
+
+//////////////////////////////////////////////////// Init of some element
 A.style.left = html.clientWidth/2+'px';
 A.style.top = html.clientHeight/2+'px';
 
-hypothen.style.left = html.clientWidth/2+'px';
-hypothen.style.top = html.clientHeight/2+'px';
+hypothenus.style.left = html.clientWidth/2+'px';
+hypothenus.style.top = html.clientHeight/2+'px';
+
+
+///////////// ADD of event
 
 html.addEventListener('mousemove',(e)=>{
-////////////////////////////////////////// deplacement des point et verification que le DOM marche
+////////////////////////////////////////// EN: moving points and checking that the DOM works //FR : deplacement des point et verification que le DOM marche
     C.style.left =e.pageX+"px";
     C.style.top = html.clientHeight/2+'px';
     B.style.left =e.pageX+"px";
     B.style.top =e.pageY+"px";
-    hypothen.style.background = "red";
-////////////////////////////////////////////////// calcule des longuer de chaque segment 
+    hypothenus.style.background = "red";
+//////////////////////////////////////////////////EN: calculate length of each segment  //FR:calcule des longuer de chaque segment 
     let AC = (e.pageX-(html.clientWidth/2));
     let BC = (e.pageY-(html.clientHeight/2));
 
@@ -40,24 +47,24 @@ html.addEventListener('mousemove',(e)=>{
         oposer.style.top = html.clientHeight/2-BC/2+'px';
         oposer.style.height = BC+"px";
     }
-/////////////////////////////////////////////////////// AC
+/////////////////////////////////////////////////////// adjacent
     if (AC<0){
-        divAC.style.width = AC*-1+"px";
-        divAC.style.left = html.clientWidth/2+AC/2+"px";
+        adjacent.style.width = AC*-1+"px";
+        adjacent.style.left = html.clientWidth/2+AC/2+"px";
 
     }else{
-        divAC.style.width = AC+"px";
-        divAC.style.left = html.clientWidth/2+AC/2+"px";
+        adjacent.style.width = AC+"px";
+        adjacent.style.left = html.clientWidth/2+AC/2+"px";
 
     }
 
 //////////////////////////////////// Hypothenus et les angles
-    hypothen.style.left = (html.clientWidth/2)- AB/2+'px';
-    hypothen.style.width = AB+"px";
+    hypothenus.style.left = (html.clientWidth/2)- AB/2+'px';
+    hypothenus.style.width = AB+"px";
 
     let angleCAB = Math.sin(AB/BC);
-    hypothen.style.transform = "rotate("+angleCAB+"turn) translate(-50%,-50%)";
-///////////////////////////////// Affichage dans la console
+    hypothenus.style.transform = "rotate("+angleCAB+"turn) translate(-50%,-50%)";
+/////////////////////////////////EN: Display in console  //FR: Affichage dans la console
     console.log("---------------------------------");
     console.log("AC = ",AC);
     console.log("BC = ",BC);
