@@ -1,8 +1,8 @@
 /////////////////////////// document recovery
-const B = document.getElementById("B");
-const A = document.getElementById("A");
-const C = document.getElementById("C")
 const html = document.querySelector("html");
+const A = document.getElementById("A");
+const B = document.getElementById("B");
+const C = document.getElementById("C")
 const oposer = document.getElementById("oposer");
 const hypothenus = document.getElementById("hypothenus");
 const adjacent = document.getElementById("adjacent");
