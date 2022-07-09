@@ -61,9 +61,15 @@ html.addEventListener('mousemove',(e)=>{
 //////////////////////////////////// Hypothenus et les angles
     hypothenus.style.left = (html.clientWidth/2)- AB/2+'px';
     hypothenus.style.width = AB+"px";
+    let tan = BC/AC
 
-    let angleCAB = Math.sin(AB/BC);//i try many function of trigonometrie
-    hypothenus.style.transform = "rotate("+angleCAB+"turn) translate(-50%,-50%)";
+    let angleCAB = Math.atan(tan)*180/3.14;
+
+    if (AC<0) {
+     hypothenus.style.transform = "rotate("+angleCAB+"deg) translate(-50%,-50%)";
+    } else {
+        hypothenus.style.transform = "rotate("+angleCAB+"deg) translate(50%,50%)";
+    }
 /////////////////////////////////EN: Display in console  //FR: Affichage dans la console
     console.log("---------------------------------");
     console.log("AC = ",AC);
